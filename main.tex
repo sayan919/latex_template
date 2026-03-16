@@ -1,0 +1,71 @@
+% =====================================================
+% DOCUMENT CLASS & PAGE GEOMETRY
+% =====================================================
+\documentclass[a4paper, 10pt]{article}   % a4paper, base font 10pt
+\usepackage[                              % Custom page margins
+    left   = 1.5cm,
+    right  = 1.5cm,
+    top    = 1.5cm,
+    bottom = 1.5cm
+]{geometry}
+\setlength{\parindent}{0pt}              % No first-line indent
+\setlength{\parskip}{6pt}               % Vertical space between paragraphs
+
+% =====================================================
+% ENCODING & FONT
+% =====================================================
+\usepackage[utf8]{inputenc}             % UTF-8 source encoding
+\usepackage{times}                      % Times New Roman font family
+
+% =====================================================
+% MATHEMATICS
+% =====================================================
+\usepackage{amsmath}                    % Core math environments (align, equation…)
+\usepackage{amsfonts}                   % Extra math fonts (\mathbb, \mathfrak…)
+\usepackage{amssymb}                    % Extra math symbols
+
+% =====================================================
+% FIGURES & TABLES
+% =====================================================
+\usepackage{graphicx}                   % \includegraphics
+\usepackage{caption}                    % Customise caption style/spacing
+\usepackage{float}                      % [H] placement specifier (force "here")
+\usepackage{wrapfig}                    % Wrap text around figures
+\usepackage{longtable}                  % Tables that span multiple pages
+\usepackage{array}                      % Advanced column types in tabular/array
+\usepackage{booktabs}                   % Professional rules: \toprule, \midrule, \bottomrule
+
+% =====================================================
+% LISTS
+% =====================================================
+\usepackage{enumitem}                   % Fine-grained list customisation
+\setlist[itemize, 1]{label=\textbf{-}}  % Default bullet → bold dash at level 1
+
+% =====================================================
+% MISCELLANEOUS
+% =====================================================
+\usepackage{pdfpages}                   % \includepdf to embed external PDF pages
+
+% =====================================================
+% HYPERLINKS & PDF METADATA
+% =====================================================
+\usepackage{hyperref}                   % Clickable cross-refs, URLs, citations
+\hypersetup{
+    colorlinks = true,                  % Colour links instead of boxes
+    linkcolor  = blue,                  % Internal links (sections, figures…)
+    citecolor  = blue,                  % Citation links
+    filecolor  = magenta,               % Links to local files
+    urlcolor   = blue,                  % External URLs
+}
+\urlstyle{same}                         % URLs use the surrounding text font
+
+% =====================================================
+% DOCUMENT BODY
+% =====================================================
+\begin{document}
+\include{contents.tex}                  % Main content lives in contents.tex
+
+% Uncomment if you use references
+%\bibliographystyle{unsrt}
+%\bibliography{references}
+\end{document}
